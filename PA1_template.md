@@ -100,7 +100,7 @@ summary(vecTotalStepsPerDayRep)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##      41    9819   10656   10752   12811   21194
 ```
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram2-1.png)<!-- -->
 
 ### Are there differences in activity patterns between weekdays and weekends?
 
@@ -113,4 +113,4 @@ dfActivityDataRep$dateType <-  ifelse(as.POSIXlt(dfActivityDataRep$date)$wday %i
 
 #### Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](PA1_template_files/figure-html/TimeSeries2-1.png)<!-- -->

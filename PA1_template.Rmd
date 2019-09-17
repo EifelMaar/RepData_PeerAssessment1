@@ -78,7 +78,7 @@ dfActivityDataRep[is.na(dfActivityDataRep)] <- as.integer(mean(dfActivityData$st
 vecTotalStepsPerDayRep <- tapply(dfActivityDataRep$steps, dfActivityDataRep$date, sum, na.rm=TRUE)
 summary(vecTotalStepsPerDayRep)
 ```
-```{r, results='markup', warning=TRUE, message=TRUE, echo=FALSE}
+```{r Histogram2, results='markup', warning=TRUE, message=TRUE, echo=FALSE}
 qplot(vecTotalStepsPerDayRep, xlab="Total Steps per Day (Replaced by Mean)", ylab="Count [bionwidth 1000]", binwidth=1000, fill=I("blue"), col=I("darkblue"), geom="histogram")
 ```
 
@@ -92,7 +92,7 @@ dfActivityDataRep$dateType <-  ifelse(as.POSIXlt(dfActivityDataRep$date)$wday %i
 
 #### Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
-```{r, results='markup', warning=TRUE, message=TRUE, echo=FALSE}
+```{r TimeSeries2, results='markup', warning=TRUE, message=TRUE, echo=FALSE}
 dfAVRActivityDataRep <- aggregate(steps ~ interval + dateType, data=dfActivityDataRep, mean)
 ggplot(dfAVRActivityDataRep, aes(interval, steps)) + 
     geom_line(colour = "blue") + 
